@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="bg"></div>
+	<div id="container">
+		<div id="wrapper">
+			<div id="content">
+				<h1 id="go" align="center"></h1>
+					
+				<h1 id="rows">
+					Rows: 0
+				</h1>
+
+				<div id="movingBlock">
+					<h1>
+						⬅ - left
+					</h1>
+
+					<h1>
+						➡ - right
+					</h1>
+
+					<h1>
+						⬇ - down
+					</h1>
+
+					<h1>
+						⬆ - rotate
+					</h1>					
+				</div>
+
+
+				<div id="canvasDiv">
+					<canvas id="canvas" width="1000" height="2000"></canvas>					
+				</div>
+
+				<div id="right_column">
+					<h1 id="next" align="center">Next:</h1>
+					<div id="canvas2Div">
+						<canvas id="canvas2" width="500" height="600"></canvas>							
+					</div>
+					
+				</div>		
+			</div>
+		</div>
+			
+	</div>
+		
+
+	<style type="text/css">	
+		* {
+			font-family: "century gothic";
+			color: white;
+			font-size: 24pt;
+		}
+
+		body {
+			margin: 0;
+			background: url(background.jpg) no-repeat;
+			background-size: cover;
+		}
+
+		#bg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(45deg, red 0%, orange 25%, green 50%, blue 75%, darkviolet 100%);
+			opacity: 0.25;
+		}
+
+		#container {
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 100vh;
+		}
+
+		#wrapper {
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			padding-bottom: 100%;			
+		}
+
+		#content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		#right_column {
+			position: absolute;
+			right: 0px;
+			width: 27.5%;
+			height: 100%;
+		}
+
+		#canvasDiv {
+			top: 4.5%;
+			height: 91%;
+			width: 46%;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			margin: 0 auto;
+			background-color: white;
+		}
+
+		#canvas {
+			position: absolute;
+			height: 98.9%;
+			top: 0.55%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		#canvas2Div {
+			top: 15%;
+			height: 26.4%;
+			width: 81.5%;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			margin: 0 auto;
+			background-color: white;
+		}
+
+		#canvas2 {
+			position: absolute;
+			top: 1.83%;
+			height: 96.35%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		#rows {
+			position: absolute;
+			top: 10%;		
+			margin: 0;	
+		}
+
+		#movingBlock {
+			position: absolute;
+			top: 30%;		
+			margin: 0;	
+		}
+
+		#next {
+			position: absolute;
+			width: 100%;
+			margin: 0;
+			top: 10%;
+		}
+
+		#go {
+			position: absolute;
+			width: 45%;
+			height: 100px;
+			font-size: 60px;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			top: 45%;
+			z-index: 10;
+			background-color: black;
+			opacity: 0;
+		}
+	</style>
+	<script src="script.js"></script>
+
+</body>
+</html>
